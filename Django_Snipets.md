@@ -81,10 +81,12 @@ python manage.py startapp app_name
 ## ⚙️Step 3: Update settings.py
 
     INSTALLED_APPS = [
+     # Third-party apps
     'rest_framework',
     'corsheaders',
     'django_celery_beat',
-    'user',
+
+    # user created apps
     'app_name'
 
 ]
@@ -93,14 +95,17 @@ python manage.py startapp app_name
 
 ## ⚙️Step 4: JWT REST Framework Settings:
 
+```bash
 REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES': (
 'rest_framework_simplejwt.authentication.JWTAuthentication',
 ),
 }
+```
 
 ## ⚙️Step 5: SimpleJWT Settings:
 
+```bash
 from datetime import timedelta
 
 SIMPLE_JWT = {
@@ -108,6 +113,7 @@ SIMPLE_JWT = {
 'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 'AUTH_HEADER_TYPES': ('Bearer',),
 }
+```
 
 ---
 
