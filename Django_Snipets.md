@@ -60,5 +60,7 @@ pip install python-decouple django-cors-headers  requests gunicorn whitenoise re
 
 🌍 Country data, async channels, PostgreSQL, etc.
 
+---
+
 🧑‍💻 Author
 Maintained by Mr Kaglur
