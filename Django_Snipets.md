@@ -62,5 +62,54 @@ pip install python-decouple django-cors-headers  requests gunicorn whitenoise re
 
 ---
 
+Now let Create our first project after installing the django and djangorestframework.Below is a full guide
+
+## Step 1: Create Django Project
+
+```bash
+django-admin startproject core .
+```
+
+Here is core is a project name and the . dot used to dont create the inner folder
+
+## Step 2: Create your app
+
+```bash
+python manage.py startapp app_name
+```
+
+## ⚙️Step 3: Update settings.py
+
+    INSTALLED_APPS = [
+    'rest_framework',
+    'corsheaders',
+    'django_celery_beat',
+    'user',
+    'app_name'
+
+]
+
+---
+
+## ⚙️Step 4: JWT REST Framework Settings:
+
+REST_FRAMEWORK = {
+'DEFAULT_AUTHENTICATION_CLASSES': (
+'rest_framework_simplejwt.authentication.JWTAuthentication',
+),
+}
+
+## ⚙️Step 5: SimpleJWT Settings:
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+---
+
 🧑‍💻 Author
 Maintained by Mr Kaglur
