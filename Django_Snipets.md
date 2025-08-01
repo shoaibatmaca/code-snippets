@@ -21,3 +21,44 @@ python -m venv environment_name
 ```bash
 python -m venv .venv
 ```
+
+## 📦 Step 2: Activate the Virtual enviornment
+
+```bash
+.venv\scritpts\activate
+```
+
+## 📦 Step 3: Install django and the Djangorestframework
+
+```bash
+pip install django djangorestframework
+```
+
+## 📦 Step 4: install JWT Authentication (SimpleJWT)
+
+```bash
+pip install djangorestframework_simplejwt
+```
+
+# 📦 Install Commonly Used Libraries
+
+```bash
+pip install python-decouple django-cors-headers  requests gunicorn whitenoise redis celery django-celery-beat django-countries channels psycopg2-binary python-dotenv dj-database-url python-decouple Pillow django-storages boto3
+```
+
+### These packages help with:
+
+🔑 Env management & secrets (decouple, dotenv)
+
+🌐 API security (cors-headers, simplejwt)
+
+📦 Deployment (gunicorn, whitenoise, dj-database-url)
+
+📷 File/image handling (Pillow, storages, boto3)
+
+🔄 Background tasks (celery, redis, beat)
+
+🌍 Country data, async channels, PostgreSQL, etc.
+
+🧑‍💻 Author
+Maintained by Mr Kaglur
