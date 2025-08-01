@@ -27,4 +27,5 @@ This guide will help you get started with a **standard, professional setup** use
 
 Author
 Maintained by Mr Kaglur
+--
 Feel free to fork, clone, or contribute!
